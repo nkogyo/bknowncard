@@ -1,0 +1,285 @@
+/* Emerald Theme CSS */
+:root {
+  /* Enhanced color palette with better contrast */
+  --emerald-primary: #66CDAA;      /* Slightly adjusted for better visibility */
+  --emerald-secondary: #27ae60;    /* Darker shade for better contrast */
+  --emerald-light: #ecf0f1;        /* Lighter background for better readability */
+  --emerald-dark: #66CDAA;         /* Darker shade for better contrast */
+  --emerald-accent: #66CDAA;       /* Kept the same */
+  --emerald-text: #2c3e50;         /* Darker text for better readability */
+  --emerald-text-light: #FFFFFF;   /* Kept the same */
+  --emerald-card-bg: rgba(255, 255, 255, 0.92); /* More opaque for better readability */
+  --emerald-shadow: rgba(0, 0, 0, 0.15);        /* Softer shadows */
+}
+
+body {
+  background-image: url('../card-bg/emerald-wave-bg.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--emerald-text);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;  /* Improved line height for readability */
+}
+
+/* Navbar styling with improved contrast */
+.navbar {
+  background-color: var(--emerald-dark) !important;
+  box-shadow: 0 2px 10px var(--emerald-shadow);
+}
+
+.navbar-brand {
+  color: var(--emerald-light) !important;
+  font-weight: bold;
+  letter-spacing: 0.5px; /* Improved letter spacing */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--emerald-light) !important;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--emerald-accent) !important; /* Hover effect */
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--emerald-accent) !important;
+  font-weight: bold;
+}
+
+/* Card styling with improved readability */
+.card {
+  background-color: var(--emerald-card-bg);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--emerald-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px; /* Consistent spacing */
+}
+
+.card-header {
+  background-color: var(--emerald-primary);
+  color: var(--emerald-text);
+  border-radius: 10px 10px 0 0 !important;
+  padding: 15px 20px;
+  font-weight: 600; /* Slightly bolder for better readability */
+}
+
+.card-body {
+  padding: 20px; /* Consistent padding */
+}
+
+/* Button styling with improved contrast */
+.btn-primary {
+  background-color: var(--emerald-primary);
+  border-color: var(--emerald-primary);
+  padding: 8px 16px; /* More comfortable padding */
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--emerald-secondary);
+  border-color: var(--emerald-secondary);
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-light {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--emerald-accent);
+  border-color: var(--emerald-accent);
+  color: var(--emerald-dark);
+}
+
+/* Form controls with improved focus states */
+.form-control {
+  padding: 10px 12px; /* More comfortable padding */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--emerald-primary);
+  box-shadow: 0 0 0 0.25rem rgba(46, 204, 113, 0.25);
+}
+
+/* Form labels with better readability */
+.form-label {
+  color: var(--emerald-text);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Alert styling with improved contrast */
+.alert-success {
+  background-color: var(--emerald-light);
+  border-color: var(--emerald-primary);
+  color: var(--emerald-dark);
+  border-radius: 6px;
+}
+
+/* Business card preview styling */
+.business-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.business-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Auth pages with improved container */
+.auth-container {
+  background-image: url('../card-bg/emerald-wave-bg.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  background-color: rgba(30, 40, 38, 0.85);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  color: var(--emerald-light);
+}
+
+.auth-header {
+  background-color: var(--emerald-primary);
+  color: var(--emerald-text-light);
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Footer styling with improved contrast */
+.footer {
+  background-color: rgba(20, 90, 50, 0.9);
+  color: var(--emerald-text-light);
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* Custom emerald gradient text */
+.emerald-gradient-text {
+  background: linear-gradient(45deg, var(--emerald-primary), var(--emerald-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--emerald-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Link styling */
+a {
+  color: var(--emerald-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--emerald-secondary);
+  text-decoration: underline;
+}
+
+/* Table styling */
+.table {
+  background-color: var(--emerald-card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--emerald-shadow);
+}
+
+.table thead th {
+  background-color: var(--emerald-primary);
+  color: var(--emerald-text-light);
+  border-color: var(--emerald-secondary);
+}
+
+
+/* Login Form Theme */
+.btn-no-outline {
+    border-color: #ced4da;
+    background-color: #fff;
+}
+.btn-no-outline:hover, .btn-no-outline:focus, .btn-no-outline.active {
+    background-color: var(--emerald-primary);
+    box-shadow: none;
+    color: white;
+}
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.back-btn {
+    top: 20px;
+    left: 20px;
+}
+.card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.card-header {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.form-label {
+    color: var(--emerald-dark);
+    font-weight: 500;
+}
+.btn-primary {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+    color: var(--emerald-text);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--emerald-secondary);
+    border-color: var(--emerald-secondary);
+    color: var(--emerald-text);
+    transform: translateY(-2px);
+}
+.form-check-label {
+    color: var(--emerald-primary);
+    font-weight: 500;
+}
+
+.form-check-input:checked {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: var(--bs-btn-active-color) !important;
+    background-color: #66cdaa !important;
+    border-color: #66cdaa !important;
+}
+
+.btn-password:hover {
+    color: var(--bs-btn-active-color) !important;
+    background-color: #66cdaa !important;
+    border-color: #66cdaa !important;
+}

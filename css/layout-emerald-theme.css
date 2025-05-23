@@ -1,0 +1,158 @@
+/* Emerald Theme CSS */
+:root {
+    /* Enhanced color palette with better contrast */
+    --emerald-primary: #66CDAA;      /* Slightly adjusted for better visibility */
+    --emerald-secondary: #27ae60;    /* Darker shade for better contrast */
+    --emerald-light: #ecf0f1;        /* Lighter background for better readability */
+    --emerald-dark: #66CDAA;         /* Darker shade for better contrast */
+    --emerald-accent: #66CDAA;       /* Kept the same */
+    --emerald-text: #2c3e50;         /* Darker text for better readability */
+    --emerald-text-light: #FFFFFF;   /* Kept the same */
+    --emerald-card-bg: rgba(255, 255, 255, 0.92); /* More opaque for better readability */
+    --emerald-shadow: rgba(0, 0, 0, 0.15);        /* Softer shadows */
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+a {
+    color: var(--emerald-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+a:hover {
+    color: var(--emerald-secondary);
+    text-decoration: underline;
+  }
+
+
+/* Typography improvements */
+h1, h2, h3, h5 {
+    color: var(--emerald-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+p {
+    margin-bottom: 1rem;
+  }
+
+  .emerald-gradient-text {
+    background: linear-gradient(45deg, var(--emerald-primary), var(--emerald-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+
+  .btn-outline-light {
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: var(--emerald-accent);
+    border-color: var(--emerald-accent);
+    color: var(--emerald-dark);
+  }
+  
+
+  .btn-primary {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+    color: var(--emerald-text);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover, .btn-primary:focus, .btn-outline-light:hover, .btn-outline-light:focus  {
+    background-color: var(--emerald-secondary);
+    border-color: var(--emerald-secondary);
+    color: var(--emerald-text);
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-img {
+    background-image: url('../card-bg/emerald-bg.png');
+    background-position: 45% 94%;
+    color: var(--emerald-text);
+  }
+
+  .lead {
+    color: var(--emerald-light);
+    font-family: 'Roboto', sans-serif;
+  }
+
+    .hero-section {
+        background-color: #000814;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-img {
+        background-image: none;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .geometric-shape {
+        position: relative;
+
+        filter: drop-shadow(0 0 15px rgba(80, 200, 120, 0.6));
+    }
+    
+    .geometric-shape:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, rgba(80, 200, 120, 0.2) 0%, transparent 70%);
+        z-index: -1;
+    }
+    
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    
+    .text-primary {
+        color: var(--emerald-primary) !important;
+        text-shadow: 0 0 10px rgba(80, 200, 120, 0.6);
+    }
+
+    .emerald-bg {
+        background-image: url('../card-bg/emerald1.png');
+        background-position: 105% 110%;
+        background-size: 25%;
+        background-repeat: no-repeat;
+
+        background-color: #000814;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-custom {
+      background-color: var(--emerald-primary);
+      border-color: var(--emerald-primary);
+      color: var(--emerald-text);
+    }
+    
+    .btn-custom:hover, .btn-custom:focus {
+      background-color: var(--emerald-secondary);
+      border-color: var(--emerald-secondary);
+      color: var(--emerald-text);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }

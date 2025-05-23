@@ -1,0 +1,405 @@
+/* Business Card Styles */
+.business-card {
+    width: 600px;
+    height: 360px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-preview {
+    background-color: #141921;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.business-card h4,
+.business-card h5,
+.business-card h6,
+.business-card p {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+/* Progress Steps */
+.progress-container {
+    margin: 30px 0;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+/* Form Elements */
+.next-btn {
+    background-color: var(--emerald-primary);
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.next-btn:hover {
+    background-color: var(--emerald-secondary);
+}
+
+/* Color picker styling */
+#colorPicker, #textColorPicker {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: dashed;
+    cursor: pointer;
+}
+
+#hexValue, #textHexValue {
+    font-family: monospace;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Public Card Styles */
+#bizCard {
+    padding-top: 40px;
+    width: 700px;
+    height: 300px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+#name {
+    color: #6c757d;
+    text-align: center;
+}
+
+#title {
+    color: #6c757d;
+    text-align: center;
+}
+
+#address, #phone, #email {
+    color: #6c757d;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* QR Code Styles */
+.qr-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.share-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.uploaded-image {
+    position: absolute;
+    z-index: 3;
+    cursor: move;
+    max-width: 100%;
+    max-height: 100%;
+}
+.uploaded-image.selected {
+    outline: 2px dashed #ff6347;
+}
+#uploadedImagesList {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Icon picker styling */
+.icon-picker-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.icon-item:hover {
+    background-color: var(--emerald-accent);
+}
+
+.icon-item.selected {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+}
+
+.icon-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.icon-search {
+    margin-bottom: 10px;
+}
+
+/* Card icons styling */
+.business-card .card-icon {
+    position: absolute;
+    z-index: 5;
+    font-size: 24px;
+    cursor: move;
+    user-select: none;
+}
+
+.sticky-preview {
+    position: sticky;
+    top: 20px; /* Distance from top of viewport when sticking */
+    z-index: 100;
+}
+
+/* Ensure the preview container has enough height */
+.card-preview-container {
+    min-height: 600px;
+}
+
+.text-format-toolbar {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.format-btn {
+    padding: 2px 8px;
+}
+
+.format-btn.active {
+    background-color: #166cc2;
+    border-color: #166cc2;
+}
+
+.font-select {
+    width: auto;
+    min-width: 120px;
+    margin-left: 5px;
+}
+
+/* Formatted text styling */
+.business-card .formatted-bold {
+    font-weight: bold;
+}
+
+.business-card .formatted-italic {
+    font-style: italic;
+}
+
+.business-card .formatted-underline {
+    text-decoration: underline;
+}
+.progress-container {
+    margin: 30px 0;
+}
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+}
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.business-card {
+    width: 600px;
+    height: 360px;
+    background-color: #000;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    position: relative;
+    overflow: hidden;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    display: none;
+}
+
+/* Draggable elements styling */
+.business-card h4,
+.business-card p {
+    position: absolute;
+    z-index: 5;
+    cursor: move;
+    user-select: none;
+    transition: box-shadow 0.3s;
+    margin: 0;
+    padding: 5px;
+}
+
+.business-card h4.dragging,
+.business-card p.dragging {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    opacity: 0.8;
+}
+
+
+    /* Align formatting buttons with input fields */
+.text-format-toolbar {
+    display: flex;
+    align-items: stretch;
+}
+    
+.text-format-toolbar .btn,
+.text-format-toolbar .form-select {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20 25 33);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e9ffff;
+}
+    
+.input-group {
+    align-items: stretch;
+}
+    
+.input-group .form-control {
+    height: 38px;
+}
+    
+.format-btn {
+    min-width: 38px;
+}
+    
+.font-select {
+    min-width: 130px;
+}
+
+.uploadcare--widget__button_type_open {
+    background: var(--emerald-primary);
+    color: #fff;
+}
+
+.uploadcare--widget__button_type_open:hover {
+    background: var(--emerald-secondary);
+}
+
+.btn-custom {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+    color: var(--emerald-text);
+  }
+  
+  .btn-custom:hover, .btn-custom:focus {
+    background-color: var(--emerald-secondary);
+    border-color: var(--emerald-secondary);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
